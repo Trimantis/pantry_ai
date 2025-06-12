@@ -1,6 +1,6 @@
-# pantry_ai
+# GourmetGhar
 
-#GOURMETGHAR
+
 
 8-Week Scrum-Based Timeline (June 17 – August 12, 2025)
 🔁 Sprint Format
