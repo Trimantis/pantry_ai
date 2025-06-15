@@ -1,104 +1,119 @@
-# GourmetGhar
+📅 8-Week Scrum Plan: Subscription Tracker App
+Team: Gayatri (Product + Frontend Dev), Shubham (Backend + AI), Chandana (UI + QA), Nigam (Automation + Testing)
+Weekly sprints with 2–3 day check-ins and a demo every Friday
 
+🔄 General Roles
+Member	Role
+Gayatri	Product Owner, Frontend UI, n8n flows
+Shubham	Backend (Supabase, Flask, GPT APIs)
+Chandana	UI Design, Component Styling, QA Testing
+Nigam	n8n setup, Notification Automation, Testing
 
+🧭 Sprint Summary Table
+Week	Sprint Goal	Heavy Load (Gayatri & Shubham)	Moderate Load (Chandana & Nigam)
+1	Project Setup & Auth Flow	Supabase/Firebase setup, login logic (Shubham), Flutter/React login screens (Gayatri)	App logo + splash screen (Chandana), user stories in Notion + project board setup (Nigam)
+2	Subscription CRUD & DB Integration	Backend schema + API endpoints (Shubham), Add/edit UI screens (Gayatri)	UI polish (Chandana), Test data input manually (Nigam)
+3	Subscription List View + Monthly Cost Calc	Fetch/display logic, group by date (Gayatri), server-side filtering logic (Shubham)	UI design feedback (Chandana), write test cases (Nigam)
+4	Reminder Logic (n8n + Twilio/Email)	Build DB to cron reminder connector (Shubham), WhatsApp/email trigger flow (Gayatri)	Twilio setup, dummy flows test (Nigam), create reminder template UI (Chandana)
+5	Smart GPT Insights & Optimization Tips	Flask API + GPT prompt handler (Shubham), frontend display of suggestions (Gayatri)	UI for suggestions card (Chandana), test API responses (Nigam)
+6	Cancellation Assistant & GPT Chat Commands	GPT "cancel" prompt builder (Shubham), UI buttons for cancel flow (Gayatri)	Build FAQ/help screen (Chandana), test each cancellation use case (Nigam)
+7	Polish & Refactor + Chatbot Integration	Bug fixing + GPT flow improvements (Shubham), chatbot interface setup (Gayatri)	UI theme consistency (Chandana), chatbot test conversations (Nigam)
+8	Final Testing + Launch	Deployment, README, launch (Shubham), pitch site + final polish (Gayatri)	User manual PDF (Chandana), cross-device testing (Nigam)
 
-8-Week Scrum-Based Timeline (June 17 – August 12, 2025)
-🔁 Sprint Format
-Sprint Duration: 1 week
+🧱 Weekly Sprint Breakdown
+🗓️ Week 1: Setup & Auth
+Sprint Goal: Complete login/signup using Supabase Auth
 
-Sprint Review: Every Sunday evening
+Shubham: Supabase setup, user auth schema, initial DB
 
-Daily Standup: Async (Google Chat/Notion update)
+Gayatri: Frontend login/signup forms, connect to Supabase
 
-Tools: GitHub, Notion/Trello, Postman, VSCode Live Share (for remote collab)
+Chandana: Create onboarding UI screen + logo
 
-🏁 Sprint 0 – Planning & Setup (June 17–23)
-Task	Owner
-Define architecture, modules, and features	Both
-Set up GitHub repo, board, virtual envs	Person A
-React.js + Bootstrap setup	Person B
-Wireframes: Pantry, Recipe, Cart, Analytics	Person B
-Dataset Collection: Pantry items, recipes, nutrition info	Person A
-Define data flow (image → ingredients → recipes → cart)	Both
+Nigam: Set up project board in Notion + task management
 
-✅ Deliverables: Dev environment ready, wireframes, task board setup
+🗓️ Week 2: Subscriptions CRUD
+Sprint Goal: Build subscription add/edit/delete UI & backend
 
-🧱 Sprint 1 – Core Setup (June 24–30)
-Task	Owner
-Backend skeleton (FastAPI + DB models)	Person A
-YOLOv8 installation and trial training	Person B
-Static React UI pages: Profile, Pantry, Cart	Person B
-Define schema: User, PantryItem, Recipe, CartItem	Person A
-Frontend pages scaffolded with dummy content	Person B
+Shubham: CRUD APIs for subscriptions
 
-✅ Deliverables: UI templates, backend skeleton, early YOLO test
+Gayatri: Add/Edit/Delete screens with validation
 
-🔍 Sprint 2 – Pantry Detection & Upload (July 1–7)
-Task	Owner
-Complete YOLOv8 pantry detection pipeline	Person B
-Backend API: /upload-image returns detected ingredients	Person A
-React upload form with detection result display	Person B
-Pantry view component to edit/verify items	Person B
-Save pantry data in backend (Postgres/SQLite)	Person A
+Chandana: Style buttons/forms, field validations
 
-✅ Deliverables: Pantry detection from image working end-to-end
+Nigam: Add sample subs for testing, DB integrity checks
 
-🧠 Sprint 3 – Recipe Matching Engine (July 8–14)
-Task	Owner
-Recipe dataset curation + normalization	Person A
-Implement ingredient-based recipe filtering	Person A
-API: /get-recipes from pantry ingredients	Person A
-RecipeCard UI component	Person B
-Integrate frontend filters → API	Person B
+🗓️ Week 3: Dashboard + Monthly Summary
+Sprint Goal: Display subscriptions & total spend
 
-✅ Deliverables: Ingredient-matching recipe suggestions shown on UI
+Shubham: Backend filter by month logic, cost summary API
 
-🥗 Sprint 4 – Macros + Nutrition Goals (July 15–21)
-Task	Owner
-Add profile setup: age, calorie, macro targets	Person B
-Integrate Nutrition API (Edamam/Nutritionix)	Person A
-Enhance recipe filtering using macro similarity	Person A
-Add sliders: Calories, Protein, Carbs, Fats	Person B
-Add macro bar in recipe cards	Person B
+Gayatri: Dashboard layout with card-style views
 
-✅ Deliverables: Personalized recipes based on macro targets
+Chandana: UI enhancements, icons for services
 
-🛒 Sprint 5 – Cart Agent + Reordering Logic (July 22–28)
-Task	Owner
-Auto-cart logic: compare pantry vs recipe needs	Person A
-Cart component UI with editing features	Person B
-Backend API: /generate-cart, /place-order	Person A
-Pantry expiry alerts (APScheduler / daily check)	Person A
-Toast alerts, confirmation modals	Person B
+Nigam: Build test cases, try weird edge inputs
 
-✅ Deliverables: Smart cart + reorder assistant completed
+🗓️ Week 4: Reminder Notifications
+Sprint Goal: n8n flow to send reminders before due date
 
-📈 Sprint 6 – Analytics + Final Polish (July 29–Aug 4)
-Task	Owner
-Macro/Calorie tracking dashboard (Recharts)	Person B
-Weekly intake vs target bar/pie charts	Person B
-Add loader/spinners, polish UI	Person B
-Endpoint for daily intake logging (if time permits)	Person A
-Minor bug fixing & code cleanup	Both
+Shubham: Script to fetch subs due in 3 days
 
-✅ Deliverables: Beautiful and informative analytics dashboard
+Gayatri: Build n8n flow + webhook to Twilio/SendGrid
 
-🎯 Sprint 7 – Testing, Documentation & Demo (Aug 5–12)
-Task	Owner
-Final integration testing	Both
-Prepare demo walkthrough (video or slides)	Person B
-Write README with setup steps + endpoints	Person A
-Collect user feedback from peers	Both
-Polish UI and animations	Person B
+Chandana: Reminder card UI, test screens
 
-✅ Deliverables: Project ready to showcase, fully functional
+Nigam: Run and validate reminder flows on test data
 
-🗂 Suggested Tools
-Category	Tool
-Version Control	GitHub
-Frontend	React.js, Bootstrap, Axios, Recharts
-Backend	Python, FastAPI, SQLite/Postgres, Nutritionix/Edamam API
-ML & CV	OpenCV, YOLOv8, PyTorch
-Project Mgmt	Trello, Notion
-Testing	Postman, React Testing Library, pytest
-Deployment (optional)	Render / Vercel / Docker (if desired)
+🗓️ Week 5: GPT-Based Optimization
+Sprint Goal: Show AI-powered suggestions to save money
+
+Shubham: Build Flask route + GPT call to analyze subs
+
+Gayatri: Display GPT response in a neat "Tip Card"
+
+Chandana: Design Tip Card UI and animation
+
+Nigam: Validate tips make sense, check prompt reliability
+
+🗓️ Week 6: Cancellation Flow
+Sprint Goal: GPT-assisted cancellation instructions
+
+Shubham: Prompt library for “cancel [service]”
+
+Gayatri: UI buttons + display steps, optional email generator
+
+Chandana: Help screen design (FAQ style)
+
+Nigam: Run cancel tests for 5 services (Netflix, Hotstar etc.)
+
+🗓️ Week 7: Final Polish + Chatbot
+Sprint Goal: Add a chatbot and polish UX/UI
+
+Shubham: Bug fixes in backend, chatbot API integration
+
+Gayatri: Chat UI and command parser
+
+Chandana: Theme styling, check dark mode
+
+Nigam: Full flow test + chatbot convo test cases
+
+🗓️ Week 8: Final Testing & Launch
+Sprint Goal: Launch MVP publicly and polish
+
+Shubham: Deploy backend (Render), clean codebase
+
+Gayatri: Landing page (Carrd or React), app store deploy/test
+
+Chandana: Create user guide PDF, marketing screenshots
+
+Nigam: Final QA test, cross-device compatibility check
+
+📂 Project Tools
+Purpose	Tool
+Task Management	Notion or Trello
+Code Repo	GitHub
+Backend	Supabase + Flask
+Frontend	Flutter or React
+Automations	n8n + GPT API + Twilio
+Communication	WhatsApp / Discord
