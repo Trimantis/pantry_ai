@@ -1,8 +1,6 @@
 📅 8-Week Scrum Plan: Subscription Tracker App
-Team: Gayatri (Product + Frontend Dev),
- Shubham (Backend + AI), 
-Chandana (UI + QA), 
-Nigam (Automation + Testing)
+
+Team: Gayatri (Product + Frontend Dev), Shubham (Backend + AI), Chandana (UI + QA), Nigam (Automation + Testing)
 Weekly sprints with 2–3 day check-ins and a demo every Friday
 
 🔄 General Roles
